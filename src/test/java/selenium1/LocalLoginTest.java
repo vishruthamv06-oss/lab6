@@ -7,11 +7,16 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+<<<<<<< HEAD
 import org.openqa.selenium.chrome.ChromeOptions;
+=======
+
+>>>>>>> 75a1798ea8e8c1e90e8c375e53e28459db5d28d5
 
 public class LocalLoginTest {
 	WebDriver driver;
 
+<<<<<<< HEAD
 	@BeforeMethod
 	public void setUp() {
 	    ChromeOptions options = new ChromeOptions();
@@ -30,6 +35,20 @@ public class LocalLoginTest {
 	    driver.get(page);
 	}
 
+=======
+    @BeforeMethod
+    public void setUp() {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+        String page = new File("webpage/login.html")
+                .getAbsoluteFile()
+                .toURI()
+                .toString();
+
+        driver.get(page);
+    }
+>>>>>>> 75a1798ea8e8c1e90e8c375e53e28459db5d28d5
 
     @Test
     public void validLoginTest() {
